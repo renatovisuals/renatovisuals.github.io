@@ -1,0 +1,51 @@
+.menu-icon{
+  position:fixed;
+  display:none;
+  top:11px;
+  right:5%;
+  height:24px;
+  width:35px;
+  cursor:pointer;
+  z-index:1200;
+  transition: opacity .25s ease;
+
+  @include atSmall{
+    display:inline;
+  }
+
+  span{
+   position:absolute;
+   background-color:#dea35a;
+   height:4px;
+   width:100%;
+   border:none;
+   left:0;
+   transition: all .35s ease;
+   cursor: pointer;
+ }
+
+ &__top{
+   top:0;
+   &.active{
+     transform: translateY(10px) translateX(0) rotate(45deg);
+     background: #dea35a;
+   }
+ }
+
+ &__middle{
+   top:10px;
+   &.active{
+     opacity: 0;
+     background: #dea35a;
+   }
+ }
+
+ &__bottom{
+   top:20px;
+   &.active{
+     transform: translateY(-10px) translateX(0) rotate(-45deg);
+     background: #dea35a;
+   }
+ }
+
+}
