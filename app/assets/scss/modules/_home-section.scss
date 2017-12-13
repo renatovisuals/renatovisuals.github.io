@@ -14,11 +14,17 @@
     z-index:0;
     transition: all .4s ease-in-out;
 
-@include atLarge{
-      height:100%;
-      right:-30vh;
-      top:auto;
-    }
+
+    @include atLarge{
+          height:100%;
+          right:-30vh;
+          top:auto;
+        }
+
+
+
+
+
   }
 
  &__text-container{
