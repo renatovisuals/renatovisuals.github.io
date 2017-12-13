@@ -1,0 +1,102 @@
+.home-section{
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  background-color: black;
+  position:relative;
+
+  &__video{
+    min-width:100%;
+    min-height:100%;
+    position:absolute;
+    right:0;
+    top:-10vh;
+    z-index:0;
+    transition: all .4s ease-in-out;
+
+@include atLarge{
+      height:100%;
+      right:-30vh;
+      top:auto;
+    }
+  }
+
+ &__text-container{
+   position:absolute;
+   top:40%;
+   z-index:99;
+   color:white;
+   display:inline-block;
+   padding:0 5%;
+
+
+   @include atMedium{
+    top:40%;
+   }
+
+   @include atSmall{
+     text-align: center;
+     width:100%;
+     padding:0;
+   }
+
+ }
+
+
+ &__logo-header{
+   z-index:100;
+   width:300px;
+   padding-bottom:50px;
+   transition: all .5s ease;
+
+   @include atMedium{
+     width:200px;
+     padding-bottom:0px;
+   }
+ }
+
+&__text{
+  color:white;
+  font-weight:100;
+
+  @include atSmall{
+    font-weight:400;
+  }
+}
+
+ &__name{
+font-size: 6em;
+line-height:0;
+transition: all .5s ease;
+
+@include atMedium{
+  font-size:4.25em;
+}
+
+@include atSmall{
+  font-size: 3em;
+}
+ }
+
+ &__subtitle{
+   font-size: 2.4em;
+   line-height:.5;
+   opacity:.6;
+   margin:0;
+   transition: all .5s ease;
+
+   @include atMedium{
+     font-size:1.65em;
+     opacity:.8;
+   }
+
+   @include atSmall{
+     font-size:1.3em;
+     opacity:1;
+     color:$lightGrey;
+   }
+ }
+
+
+
+}

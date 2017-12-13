@@ -1,0 +1,59 @@
+.social-links{
+padding:0;
+
+  & ul{
+    margin:0;
+    padding:0;
+    padding-top: 15px;
+    font-size:0;
+
+    @include atSmall{
+      padding-top:8px;
+    }
+
+  }
+
+  &__list-item{
+  list-style-type: none;
+  display:inline-block;
+  padding:0;
+  padding-right: 10px;
+  opacity:.4;
+  transition: all .3s ease;
+
+  @include atMedium{
+    padding-right:8px;
+  }
+
+
+
+  &:hover{
+    padding-right:25px;
+    opacity:1;
+  }
+
+  @include atSmall{
+    &:hover{
+      padding-right:8px;
+    }
+  }
+
+
+  }
+
+  &__link{
+  height:30px;
+  width:30px;
+
+  @include atMedium{
+    width:25px;
+    height:25px;
+  }
+
+  @include atSmall{
+    width:22px;
+    height:22px;
+  }
+
+  }
+}

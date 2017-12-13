@@ -9,11 +9,10 @@
   @media (max-width:800px){
     @content;
   }
-
-@mixin atLarge{
-  @media (max-width:1010px){
-    @content;
-  }
 }
 
+@mixin atLarge{
+  @media (max-width:1200px){
+    @content;
+  }
 }
