@@ -7,7 +7,7 @@
 
   &__video{
     min-width:100%;
-    min-height:100%;
+    min-height:110%;
     position:absolute;
     right:0;
     top:-10vh;
@@ -16,8 +16,10 @@
 
     @include videoAtLarge{
           height:100%;
-          right:-250px;
-          top:auto;
+          right:-275px;
+            }
+    @include atMedium{
+
             }
 
   }
