@@ -16,3 +16,15 @@
     @content;
   }
 }
+
+@mixin videoAtLarge{
+  @media (max-width:1000px){
+    @content;
+  }
+}
+
+@mixin atMediumHeight{
+  @media (max-height:700px){
+  @content;
+}
+}

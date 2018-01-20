@@ -14,16 +14,11 @@
     z-index:0;
     transition: all .4s ease-in-out;
 
-
-    @include atLarge{
+    @include videoAtLarge{
           height:100%;
           right:-30vh;
           top:auto;
-        }
-
-
-
-
+            }
 
   }
 
@@ -44,6 +39,11 @@
      text-align: center;
      width:100%;
      padding:0;
+   }
+
+   @include atMediumHeight{
+    top:50%;
+    transform:translateY(-50%);
    }
 
  }
