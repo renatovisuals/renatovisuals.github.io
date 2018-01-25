@@ -51,17 +51,39 @@
     top:0;
     left:2px;
     bottom:5px;
-    margin-left: 20%;
+    margin-left:0%;
     right:0;
     background-color:#202020;
     z-index: -1;
 
-    transition:all 1.5s ease;
+    transition:margin-left 1.5s ease;
   }
 
-  &__extended-width{
+  &__photoshop-skill{
     margin-left:97%;
   }
+
+  &__illustrator-skill{
+    margin-left:90%;
+  }
+
+  &__javascript-skill{
+    margin-left:35%;
+  }
+
+  &__html-skill{
+    margin-left:97%;
+  }
+
+  &__css-skill{
+    margin-left:90%;
+  }
+
+  &__patience-skill{
+    margin-left:97%;
+  }
+
+
 
 
 }

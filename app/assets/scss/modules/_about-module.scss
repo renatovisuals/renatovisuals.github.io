@@ -23,7 +23,11 @@
     box-sizing: border-box;
 
     &--left{
-      padding-right:30px;
+      padding-right:0px;
+
+      @include atSmall{
+        padding-right:30px;
+      }
     }
 
     @include atMedium{
