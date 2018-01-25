@@ -1,6 +1,6 @@
 .menu-icon{
   position:fixed;
-  display:none;
+  display:inline;
   top:11px;
   right:5%;
   height:24px;
@@ -10,7 +10,7 @@
   transition: opacity .25s ease;
 
   @include atSmall{
-    display:inline;
+  display:none;
   }
 
   span{

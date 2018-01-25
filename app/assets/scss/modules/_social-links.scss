@@ -4,11 +4,11 @@ padding:0;
   & ul{
     margin:0;
     padding:0;
-    padding-top: 15px;
+    padding-top:8px;
     font-size:0;
 
     @include atSmall{
-      padding-top:8px;
+      padding-top:15px;
     }
 
   }
@@ -17,24 +17,24 @@ padding:0;
   list-style-type: none;
   display:inline-block;
   padding:0;
-  padding-right: 10px;
+  padding-right: 8px;
   opacity:.4;
   transition: all .3s ease;
 
   @include atMedium{
-    padding-right:8px;
+    padding-right:10px;
   }
 
 
 
   &:hover{
-    padding-right:25px;
+    padding-right:8px;
     opacity:1;
   }
 
   @include atSmall{
     &:hover{
-      padding-right:8px;
+      padding-right:25px;
     }
   }
 
@@ -42,18 +42,20 @@ padding:0;
   }
 
   &__link{
-  height:30px;
-  width:30px;
+  height:22px;
+  width:22px;
 
-  @include atMedium{
+  @include atSmall{
     width:25px;
     height:25px;
   }
 
-  @include atSmall{
-    width:22px;
-    height:22px;
+  @include atMedium{
+    width:30px;
+    height:30px;
   }
+
+
 
   }
 }

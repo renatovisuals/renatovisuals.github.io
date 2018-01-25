@@ -9,18 +9,16 @@
     min-width:100%;
     min-height:110%;
     position:absolute;
-    right:0;
+    height:100%;
+    right:-275px;
     top:-10vh;
     z-index:0;
     transition: all .4s ease-in-out;
 
     @include videoAtLarge{
-          height:100%;
-          right:-275px;
+          right:0;
             }
-    @include atMedium{
 
-            }
 
   }
 
@@ -30,17 +28,21 @@
    z-index:99;
    color:white;
    display:inline-block;
-   padding:0 5%;
 
+   text-align: center;
+   width:100%;
+   padding:0;
 
    @include atMedium{
-    top:40%;
+
+
+
    }
 
    @include atSmall{
-     text-align: center;
-     width:100%;
-     padding:0;
+   text-align: left;
+   padding:0 5%;
+   top:40%;
    }
 
    @include atMediumHeight{
@@ -53,55 +55,54 @@
 
  &__logo-header{
    z-index:100;
-   width:300px;
-   padding-bottom:50px;
+   width:200px;
    transition: all .5s ease;
 
    @include atMedium{
-     width:200px;
-     padding-bottom:0px;
+     width:300px;
+     padding-bottom:50px;
    }
  }
 
 &__text{
   color:white;
-  font-weight:100;
+  font-weight:400;
 
   @include atSmall{
-    font-weight:400;
+    font-weight:100;
   }
 }
 
  &__name{
-font-size: 6em;
+font-size: 3em;
 line-height:0;
 transition: all .5s ease;
 
-@include atMedium{
-  font-size:4.25em;
+@include atSmall{
+  font-size: 4.25em;
 }
 
-@include atSmall{
-  font-size: 3em;
+@include atMedium{
+  font-size: 6em;
 }
  }
 
  &__subtitle{
-   font-size: 2.4em;
+   font-size: 1.3em;
    line-height:.5;
-   opacity:.6;
+   opacity:1;
    margin:0;
    transition: all .5s ease;
 
-   @include atMedium{
+   @include atSmall{
      font-size:1.65em;
      opacity:.8;
+     color:$lightGrey;
    }
 
-   @include atSmall{
-     font-size:1.3em;
-     opacity:1;
-     color:$lightGrey;
+   @include atMedium{
+     font-size:2.4em;
+     opacity:.6;
    }
  }
 

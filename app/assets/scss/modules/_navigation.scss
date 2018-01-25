@@ -17,16 +17,16 @@
 
   &__links{
   float:left;
-  display:inline-block;
   color:#fff;
   font-weight:400;
   height:45px;
   line-height:45px;
   padding: 0 2.3%;
   transition: all .2s ease-in;
+  display:none;
 
   @include atSmall{
-    display:none;
+  display:inline-block;
   }
 
   &:hover{
@@ -39,14 +39,11 @@
 
   &__first-link{
     background-color:$mainGold;
+    display:inline-block;
     margin-right:10px;
 
     &:hover{
       background-color: $darkGold;
-    }
-
-    @include atSmall{
-      display:inline-block;
     }
 
   }
