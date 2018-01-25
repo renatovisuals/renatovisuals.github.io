@@ -1,0 +1,18 @@
+.row{
+  @include clearfix;
+
+@include atMedium{
+&__medium-12{
+  float:left;
+  width:100%;
+}
+}
+
+@include atLarge{
+  &__large-6{
+    float:left;
+    width:50%;
+  }
+}
+
+}

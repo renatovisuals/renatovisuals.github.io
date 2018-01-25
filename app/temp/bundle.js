@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -202,7 +202,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(5);
+var	fixUrls = __webpack_require__(6);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -519,265 +519,6 @@ function updateLink (link, options, obj) {
 
 /***/ }),
 /* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(3);
-
-__webpack_require__(6);
-
-var _menuIcon = __webpack_require__(8);
-
-var _menuIcon2 = _interopRequireDefault(_menuIcon);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var message = 'hello webpack';
-
-var menuIcon = new _menuIcon2.default();
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(4);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// Prepare cssTransformation
-var transform;
-
-var options = {"hmr":true}
-options.transform = transform
-// add the styles to the DOM
-var update = __webpack_require__(1)(content, options);
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../css-loader/index.js!./normalize.css", function() {
-			var newContent = require("!!../css-loader/index.js!./normalize.css");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, "/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */\n\n/* Document\n   ========================================================================== */\n\n/**\n * 1. Correct the line height in all browsers.\n * 2. Prevent adjustments of font size after orientation changes in\n *    IE on Windows Phone and in iOS.\n */\n\nhtml {\n  line-height: 1.15; /* 1 */\n  -ms-text-size-adjust: 100%; /* 2 */\n  -webkit-text-size-adjust: 100%; /* 2 */\n}\n\n/* Sections\n   ========================================================================== */\n\n/**\n * Remove the margin in all browsers (opinionated).\n */\n\nbody {\n  margin: 0;\n}\n\n/**\n * Add the correct display in IE 9-.\n */\n\narticle,\naside,\nfooter,\nheader,\nnav,\nsection {\n  display: block;\n}\n\n/**\n * Correct the font size and margin on `h1` elements within `section` and\n * `article` contexts in Chrome, Firefox, and Safari.\n */\n\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0;\n}\n\n/* Grouping content\n   ========================================================================== */\n\n/**\n * Add the correct display in IE 9-.\n * 1. Add the correct display in IE.\n */\n\nfigcaption,\nfigure,\nmain { /* 1 */\n  display: block;\n}\n\n/**\n * Add the correct margin in IE 8.\n */\n\nfigure {\n  margin: 1em 40px;\n}\n\n/**\n * 1. Add the correct box sizing in Firefox.\n * 2. Show the overflow in Edge and IE.\n */\n\nhr {\n  box-sizing: content-box; /* 1 */\n  height: 0; /* 1 */\n  overflow: visible; /* 2 */\n}\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\n\npre {\n  font-family: monospace, monospace; /* 1 */\n  font-size: 1em; /* 2 */\n}\n\n/* Text-level semantics\n   ========================================================================== */\n\n/**\n * 1. Remove the gray background on active links in IE 10.\n * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.\n */\n\na {\n  background-color: transparent; /* 1 */\n  -webkit-text-decoration-skip: objects; /* 2 */\n}\n\n/**\n * 1. Remove the bottom border in Chrome 57- and Firefox 39-.\n * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.\n */\n\nabbr[title] {\n  border-bottom: none; /* 1 */\n  text-decoration: underline; /* 2 */\n  text-decoration: underline dotted; /* 2 */\n}\n\n/**\n * Prevent the duplicate application of `bolder` by the next rule in Safari 6.\n */\n\nb,\nstrong {\n  font-weight: inherit;\n}\n\n/**\n * Add the correct font weight in Chrome, Edge, and Safari.\n */\n\nb,\nstrong {\n  font-weight: bolder;\n}\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\n\ncode,\nkbd,\nsamp {\n  font-family: monospace, monospace; /* 1 */\n  font-size: 1em; /* 2 */\n}\n\n/**\n * Add the correct font style in Android 4.3-.\n */\n\ndfn {\n  font-style: italic;\n}\n\n/**\n * Add the correct background and color in IE 9-.\n */\n\nmark {\n  background-color: #ff0;\n  color: #000;\n}\n\n/**\n * Add the correct font size in all browsers.\n */\n\nsmall {\n  font-size: 80%;\n}\n\n/**\n * Prevent `sub` and `sup` elements from affecting the line height in\n * all browsers.\n */\n\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\n\nsub {\n  bottom: -0.25em;\n}\n\nsup {\n  top: -0.5em;\n}\n\n/* Embedded content\n   ========================================================================== */\n\n/**\n * Add the correct display in IE 9-.\n */\n\naudio,\nvideo {\n  display: inline-block;\n}\n\n/**\n * Add the correct display in iOS 4-7.\n */\n\naudio:not([controls]) {\n  display: none;\n  height: 0;\n}\n\n/**\n * Remove the border on images inside links in IE 10-.\n */\n\nimg {\n  border-style: none;\n}\n\n/**\n * Hide the overflow in IE.\n */\n\nsvg:not(:root) {\n  overflow: hidden;\n}\n\n/* Forms\n   ========================================================================== */\n\n/**\n * 1. Change the font styles in all browsers (opinionated).\n * 2. Remove the margin in Firefox and Safari.\n */\n\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: sans-serif; /* 1 */\n  font-size: 100%; /* 1 */\n  line-height: 1.15; /* 1 */\n  margin: 0; /* 2 */\n}\n\n/**\n * Show the overflow in IE.\n * 1. Show the overflow in Edge.\n */\n\nbutton,\ninput { /* 1 */\n  overflow: visible;\n}\n\n/**\n * Remove the inheritance of text transform in Edge, Firefox, and IE.\n * 1. Remove the inheritance of text transform in Firefox.\n */\n\nbutton,\nselect { /* 1 */\n  text-transform: none;\n}\n\n/**\n * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`\n *    controls in Android 4.\n * 2. Correct the inability to style clickable types in iOS and Safari.\n */\n\nbutton,\nhtml [type=\"button\"], /* 1 */\n[type=\"reset\"],\n[type=\"submit\"] {\n  -webkit-appearance: button; /* 2 */\n}\n\n/**\n * Remove the inner border and padding in Firefox.\n */\n\nbutton::-moz-focus-inner,\n[type=\"button\"]::-moz-focus-inner,\n[type=\"reset\"]::-moz-focus-inner,\n[type=\"submit\"]::-moz-focus-inner {\n  border-style: none;\n  padding: 0;\n}\n\n/**\n * Restore the focus styles unset by the previous rule.\n */\n\nbutton:-moz-focusring,\n[type=\"button\"]:-moz-focusring,\n[type=\"reset\"]:-moz-focusring,\n[type=\"submit\"]:-moz-focusring {\n  outline: 1px dotted ButtonText;\n}\n\n/**\n * Correct the padding in Firefox.\n */\n\nfieldset {\n  padding: 0.35em 0.75em 0.625em;\n}\n\n/**\n * 1. Correct the text wrapping in Edge and IE.\n * 2. Correct the color inheritance from `fieldset` elements in IE.\n * 3. Remove the padding so developers are not caught out when they zero out\n *    `fieldset` elements in all browsers.\n */\n\nlegend {\n  box-sizing: border-box; /* 1 */\n  color: inherit; /* 2 */\n  display: table; /* 1 */\n  max-width: 100%; /* 1 */\n  padding: 0; /* 3 */\n  white-space: normal; /* 1 */\n}\n\n/**\n * 1. Add the correct display in IE 9-.\n * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.\n */\n\nprogress {\n  display: inline-block; /* 1 */\n  vertical-align: baseline; /* 2 */\n}\n\n/**\n * Remove the default vertical scrollbar in IE.\n */\n\ntextarea {\n  overflow: auto;\n}\n\n/**\n * 1. Add the correct box sizing in IE 10-.\n * 2. Remove the padding in IE 10-.\n */\n\n[type=\"checkbox\"],\n[type=\"radio\"] {\n  box-sizing: border-box; /* 1 */\n  padding: 0; /* 2 */\n}\n\n/**\n * Correct the cursor style of increment and decrement buttons in Chrome.\n */\n\n[type=\"number\"]::-webkit-inner-spin-button,\n[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto;\n}\n\n/**\n * 1. Correct the odd appearance in Chrome and Safari.\n * 2. Correct the outline style in Safari.\n */\n\n[type=\"search\"] {\n  -webkit-appearance: textfield; /* 1 */\n  outline-offset: -2px; /* 2 */\n}\n\n/**\n * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.\n */\n\n[type=\"search\"]::-webkit-search-cancel-button,\n[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\n\n/**\n * 1. Correct the inability to style clickable types in iOS and Safari.\n * 2. Change font properties to `inherit` in Safari.\n */\n\n::-webkit-file-upload-button {\n  -webkit-appearance: button; /* 1 */\n  font: inherit; /* 2 */\n}\n\n/* Interactive\n   ========================================================================== */\n\n/*\n * Add the correct display in IE 9-.\n * 1. Add the correct display in Edge, IE, and Firefox.\n */\n\ndetails, /* 1 */\nmenu {\n  display: block;\n}\n\n/*\n * Add the correct display in all browsers.\n */\n\nsummary {\n  display: list-item;\n}\n\n/* Scripting\n   ========================================================================== */\n\n/**\n * Add the correct display in IE 9-.\n */\n\ncanvas {\n  display: inline-block;\n}\n\n/**\n * Add the correct display in IE.\n */\n\ntemplate {\n  display: none;\n}\n\n/* Hidden\n   ========================================================================== */\n\n/**\n * Add the correct display in IE 10-.\n */\n\n[hidden] {\n  display: none;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/**
- * When source maps are enabled, `style-loader` uses a link element with a data-uri to
- * embed the css on the page. This breaks all relative urls because now they are relative to a
- * bundle instead of the current page.
- *
- * One solution is to only use full urls, but that may be impossible.
- *
- * Instead, this function "fixes" the relative urls to be absolute according to the current page location.
- *
- * A rudimentary test suite is located at `test/fixUrls.js` and can be run via the `npm test` command.
- *
- */
-
-module.exports = function (css) {
-	// get current location
-	var location = typeof window !== "undefined" && window.location;
-
-	if (!location) {
-		throw new Error("fixUrls requires window.location");
-	}
-
-	// blank or null?
-	if (!css || typeof css !== "string") {
-		return css;
-	}
-
-	var baseUrl = location.protocol + "//" + location.host;
-	var currentDir = baseUrl + location.pathname.replace(/\/[^\/]*$/, "/");
-
-	// convert each url(...)
-	/*
- This regular expression is just a way to recursively match brackets within
- a string.
- 	 /url\s*\(  = Match on the word "url" with any whitespace after it and then a parens
-    (  = Start a capturing group
-      (?:  = Start a non-capturing group
-          [^)(]  = Match anything that isn't a parentheses
-          |  = OR
-          \(  = Match a start parentheses
-              (?:  = Start another non-capturing groups
-                  [^)(]+  = Match anything that isn't a parentheses
-                  |  = OR
-                  \(  = Match a start parentheses
-                      [^)(]*  = Match anything that isn't a parentheses
-                  \)  = Match a end parentheses
-              )  = End Group
-              *\) = Match anything and then a close parens
-          )  = Close non-capturing group
-          *  = Match anything
-       )  = Close capturing group
-  \)  = Match a close parens
- 	 /gi  = Get all matches, not the first.  Be case insensitive.
-  */
-	var fixedCss = css.replace(/url\s*\(((?:[^)(]|\((?:[^)(]+|\([^)(]*\))*\))*)\)/gi, function (fullMatch, origUrl) {
-		// strip quotes (if they exist)
-		var unquotedOrigUrl = origUrl.trim().replace(/^"(.*)"$/, function (o, $1) {
-			return $1;
-		}).replace(/^'(.*)'$/, function (o, $1) {
-			return $1;
-		});
-
-		// already a full url? no change
-		if (/^(#|data:|http:\/\/|https:\/\/|file:\/\/\/)/i.test(unquotedOrigUrl)) {
-			return fullMatch;
-		}
-
-		// convert the url to a full url
-		var newUrl;
-
-		if (unquotedOrigUrl.indexOf("//") === 0) {
-			//TODO: should we add protocol?
-			newUrl = unquotedOrigUrl;
-		} else if (unquotedOrigUrl.indexOf("/") === 0) {
-			// path should be relative to the base url
-			newUrl = baseUrl + unquotedOrigUrl; // already starts with '/'
-		} else {
-			// path should be relative to current directory
-			newUrl = currentDir + unquotedOrigUrl.replace(/^\.\//, ""); // Strip leading './'
-		}
-
-		// send back the fixed url(...)
-		return "url(" + JSON.stringify(newUrl) + ")";
-	});
-
-	// send back the fixed css
-	return fixedCss;
-};
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(7);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// Prepare cssTransformation
-var transform;
-
-var options = {"hmr":true}
-options.transform = transform
-// add the styles to the DOM
-var update = __webpack_require__(1)(content, options);
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/sass-loader/lib/loader.js!./main.scss", function() {
-			var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/sass-loader/lib/loader.js!./main.scss");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, "* {\n  font-family: 'Roboto', sans-serif;\n  -webkit-font-smoothing: antialiased; }\n\nvideo::-webkit-media-controls {\n  display: none !important; }\n\n.wrapper--main {\n  padding-left: 5%;\n  padding-right: 5%; }\n\n.navigation {\n  width: 100%;\n  height: 45px;\n  background-color: rgba(0, 0, 0, 0.75);\n  position: fixed;\n  top: 0;\n  z-index: 1; }\n  .navigation__link-container {\n    list-style-type: none;\n    font-size: 1em;\n    padding-left: 0;\n    margin: 0; }\n  .navigation__links {\n    float: left;\n    display: inline-block;\n    color: #fff;\n    font-weight: 400;\n    height: 45px;\n    line-height: 45px;\n    padding: 0 2.3%;\n    transition: all .2s ease-in; }\n    @media (max-width: 530px) {\n      .navigation__links {\n        display: none; } }\n    .navigation__links:hover {\n      color: #c8c8c8; }\n  .navigation__first-link {\n    background-color: #d99850;\n    margin-right: 10px; }\n    .navigation__first-link:hover {\n      background-color: #bf8749; }\n    @media (max-width: 530px) {\n      .navigation__first-link {\n        display: inline-block; } }\n  .navigation__logo {\n    display: inline-block;\n    vertical-align: middle;\n    height: 30px;\n    line-height: 50px;\n    padding-right: 0px;\n    padding: 0px 15px 0px 15px; }\n\n.mobile-nav {\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 1000;\n  height: 100%;\n  width: 100%;\n  background-color: rgba(0, 0, 0, 0.85);\n  text-align: center;\n  opacity: 0;\n  visibility: hidden;\n  transition: opacity .3s, visibility .3s, height .3s;\n  overflow: hidden; }\n  .mobile-nav--active {\n    opacity: 1;\n    visibility: visible; }\n  .mobile-nav__link-container {\n    position: relative;\n    top: 50%;\n    height: 40%;\n    transform: translateY(-50%);\n    font-size: 30px;\n    font-weight: 100;\n    text-align: center; }\n    .mobile-nav__link-container ul {\n      list-style-type: none;\n      display: inline-block;\n      position: relative;\n      height: 100%;\n      margin: 0px;\n      padding: 0px; }\n  .mobile-nav__links {\n    display: block;\n    height: 25%;\n    min-height: 50px;\n    position: relative;\n    text-align: center; }\n    .mobile-nav__links a {\n      text-decoration: none;\n      color: #fff; }\n\n.menu-icon {\n  position: fixed;\n  display: none;\n  top: 11px;\n  right: 5%;\n  height: 24px;\n  width: 35px;\n  cursor: pointer;\n  z-index: 1200;\n  transition: opacity .25s ease; }\n  @media (max-width: 530px) {\n    .menu-icon {\n      display: inline; } }\n  .menu-icon span {\n    position: absolute;\n    background-color: #dea35a;\n    height: 4px;\n    width: 100%;\n    border: none;\n    left: 0;\n    transition: all .35s ease;\n    cursor: pointer; }\n  .menu-icon__top {\n    top: 0; }\n    .menu-icon__top.active {\n      transform: translateY(10px) translateX(0) rotate(45deg);\n      background: #dea35a; }\n  .menu-icon__middle {\n    top: 10px; }\n    .menu-icon__middle.active {\n      opacity: 0;\n      background: #dea35a; }\n  .menu-icon__bottom {\n    top: 20px; }\n    .menu-icon__bottom.active {\n      transform: translateY(-10px) translateX(0) rotate(-45deg);\n      background: #dea35a; }\n\n.section {\n  width: 100%;\n  height: 100vh;\n  min-height: 600px; }\n\n.home-section {\n  width: 100%;\n  height: 100%;\n  overflow: hidden;\n  background-color: black;\n  position: relative; }\n  .home-section__video {\n    min-width: 100%;\n    min-height: 110%;\n    position: absolute;\n    right: 0;\n    top: -10vh;\n    z-index: 0;\n    transition: all .4s ease-in-out; }\n    @media (max-width: 1000px) {\n      .home-section__video {\n        height: 100%;\n        right: -275px; } }\n  .home-section__text-container {\n    position: absolute;\n    top: 40%;\n    z-index: 99;\n    color: white;\n    display: inline-block;\n    padding: 0 5%; }\n    @media (max-width: 800px) {\n      .home-section__text-container {\n        top: 40%; } }\n    @media (max-width: 530px) {\n      .home-section__text-container {\n        text-align: center;\n        width: 100%;\n        padding: 0; } }\n    @media (max-height: 700px) {\n      .home-section__text-container {\n        top: 50%;\n        transform: translateY(-50%); } }\n  .home-section__logo-header {\n    z-index: 100;\n    width: 300px;\n    padding-bottom: 50px;\n    transition: all .5s ease; }\n    @media (max-width: 800px) {\n      .home-section__logo-header {\n        width: 200px;\n        padding-bottom: 0px; } }\n  .home-section__text {\n    color: white;\n    font-weight: 100; }\n    @media (max-width: 530px) {\n      .home-section__text {\n        font-weight: 400; } }\n  .home-section__name {\n    font-size: 6em;\n    line-height: 0;\n    transition: all .5s ease; }\n    @media (max-width: 800px) {\n      .home-section__name {\n        font-size: 4.25em; } }\n    @media (max-width: 530px) {\n      .home-section__name {\n        font-size: 3em; } }\n  .home-section__subtitle {\n    font-size: 2.4em;\n    line-height: .5;\n    opacity: .6;\n    margin: 0;\n    transition: all .5s ease; }\n    @media (max-width: 800px) {\n      .home-section__subtitle {\n        font-size: 1.65em;\n        opacity: .8; } }\n    @media (max-width: 530px) {\n      .home-section__subtitle {\n        font-size: 1.3em;\n        opacity: 1;\n        color: #c8c8c8; } }\n\n.social-links {\n  padding: 0; }\n  .social-links ul {\n    margin: 0;\n    padding: 0;\n    padding-top: 15px;\n    font-size: 0; }\n    @media (max-width: 530px) {\n      .social-links ul {\n        padding-top: 8px; } }\n  .social-links__list-item {\n    list-style-type: none;\n    display: inline-block;\n    padding: 0;\n    padding-right: 10px;\n    opacity: .4;\n    transition: all .3s ease; }\n    @media (max-width: 800px) {\n      .social-links__list-item {\n        padding-right: 8px; } }\n    .social-links__list-item:hover {\n      padding-right: 25px;\n      opacity: 1; }\n    @media (max-width: 530px) {\n      .social-links__list-item:hover {\n        padding-right: 8px; } }\n  .social-links__link {\n    height: 30px;\n    width: 30px; }\n    @media (max-width: 800px) {\n      .social-links__link {\n        width: 25px;\n        height: 25px; } }\n    @media (max-width: 530px) {\n      .social-links__link {\n        width: 22px;\n        height: 22px; } }\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 8 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _jquery = __webpack_require__(9);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var MenuIcon = function () {
-  function MenuIcon() {
-    _classCallCheck(this, MenuIcon);
-
-    this.menuButton = (0, _jquery2.default)("#toggle");
-    this.topBar = (0, _jquery2.default)(".menu-icon__top");
-    this.middleBar = (0, _jquery2.default)(".menu-icon__middle");
-    this.bottomBar = (0, _jquery2.default)(".menu-icon__bottom");
-    this.mobileNav = (0, _jquery2.default)("#mobileNav");
-    this.events();
-  }
-
-  _createClass(MenuIcon, [{
-    key: "events",
-    value: function events() {
-      this.menuButton.click(this.toggleClass.bind(this));
-    }
-  }, {
-    key: "toggleClass",
-    value: function toggleClass() {
-      this.topBar.toggleClass("active");
-      this.middleBar.toggleClass("active");
-      this.bottomBar.toggleClass("active");
-      this.mobileNav.toggleClass("mobile-nav--active");
-    }
-  }]);
-
-  return MenuIcon;
-}();
-
-exports.default = MenuIcon;
-
-/***/ }),
-/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10613,6 +10354,270 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10)(module)))
 
 /***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(4);
+
+__webpack_require__(7);
+
+var _menuIcon = __webpack_require__(9);
+
+var _menuIcon2 = _interopRequireDefault(_menuIcon);
+
+var _RevealOnScroll = __webpack_require__(11);
+
+var _RevealOnScroll2 = _interopRequireDefault(_RevealOnScroll);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var message = 'hello webpack';
+
+var menuIcon = new _menuIcon2.default();
+var revealOnScroll = new _RevealOnScroll2.default();
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(5);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {"hmr":true}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../css-loader/index.js!./normalize.css", function() {
+			var newContent = require("!!../css-loader/index.js!./normalize.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */\n\n/* Document\n   ========================================================================== */\n\n/**\n * 1. Correct the line height in all browsers.\n * 2. Prevent adjustments of font size after orientation changes in\n *    IE on Windows Phone and in iOS.\n */\n\nhtml {\n  line-height: 1.15; /* 1 */\n  -ms-text-size-adjust: 100%; /* 2 */\n  -webkit-text-size-adjust: 100%; /* 2 */\n}\n\n/* Sections\n   ========================================================================== */\n\n/**\n * Remove the margin in all browsers (opinionated).\n */\n\nbody {\n  margin: 0;\n}\n\n/**\n * Add the correct display in IE 9-.\n */\n\narticle,\naside,\nfooter,\nheader,\nnav,\nsection {\n  display: block;\n}\n\n/**\n * Correct the font size and margin on `h1` elements within `section` and\n * `article` contexts in Chrome, Firefox, and Safari.\n */\n\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0;\n}\n\n/* Grouping content\n   ========================================================================== */\n\n/**\n * Add the correct display in IE 9-.\n * 1. Add the correct display in IE.\n */\n\nfigcaption,\nfigure,\nmain { /* 1 */\n  display: block;\n}\n\n/**\n * Add the correct margin in IE 8.\n */\n\nfigure {\n  margin: 1em 40px;\n}\n\n/**\n * 1. Add the correct box sizing in Firefox.\n * 2. Show the overflow in Edge and IE.\n */\n\nhr {\n  box-sizing: content-box; /* 1 */\n  height: 0; /* 1 */\n  overflow: visible; /* 2 */\n}\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\n\npre {\n  font-family: monospace, monospace; /* 1 */\n  font-size: 1em; /* 2 */\n}\n\n/* Text-level semantics\n   ========================================================================== */\n\n/**\n * 1. Remove the gray background on active links in IE 10.\n * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.\n */\n\na {\n  background-color: transparent; /* 1 */\n  -webkit-text-decoration-skip: objects; /* 2 */\n}\n\n/**\n * 1. Remove the bottom border in Chrome 57- and Firefox 39-.\n * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.\n */\n\nabbr[title] {\n  border-bottom: none; /* 1 */\n  text-decoration: underline; /* 2 */\n  text-decoration: underline dotted; /* 2 */\n}\n\n/**\n * Prevent the duplicate application of `bolder` by the next rule in Safari 6.\n */\n\nb,\nstrong {\n  font-weight: inherit;\n}\n\n/**\n * Add the correct font weight in Chrome, Edge, and Safari.\n */\n\nb,\nstrong {\n  font-weight: bolder;\n}\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\n\ncode,\nkbd,\nsamp {\n  font-family: monospace, monospace; /* 1 */\n  font-size: 1em; /* 2 */\n}\n\n/**\n * Add the correct font style in Android 4.3-.\n */\n\ndfn {\n  font-style: italic;\n}\n\n/**\n * Add the correct background and color in IE 9-.\n */\n\nmark {\n  background-color: #ff0;\n  color: #000;\n}\n\n/**\n * Add the correct font size in all browsers.\n */\n\nsmall {\n  font-size: 80%;\n}\n\n/**\n * Prevent `sub` and `sup` elements from affecting the line height in\n * all browsers.\n */\n\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\n\nsub {\n  bottom: -0.25em;\n}\n\nsup {\n  top: -0.5em;\n}\n\n/* Embedded content\n   ========================================================================== */\n\n/**\n * Add the correct display in IE 9-.\n */\n\naudio,\nvideo {\n  display: inline-block;\n}\n\n/**\n * Add the correct display in iOS 4-7.\n */\n\naudio:not([controls]) {\n  display: none;\n  height: 0;\n}\n\n/**\n * Remove the border on images inside links in IE 10-.\n */\n\nimg {\n  border-style: none;\n}\n\n/**\n * Hide the overflow in IE.\n */\n\nsvg:not(:root) {\n  overflow: hidden;\n}\n\n/* Forms\n   ========================================================================== */\n\n/**\n * 1. Change the font styles in all browsers (opinionated).\n * 2. Remove the margin in Firefox and Safari.\n */\n\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: sans-serif; /* 1 */\n  font-size: 100%; /* 1 */\n  line-height: 1.15; /* 1 */\n  margin: 0; /* 2 */\n}\n\n/**\n * Show the overflow in IE.\n * 1. Show the overflow in Edge.\n */\n\nbutton,\ninput { /* 1 */\n  overflow: visible;\n}\n\n/**\n * Remove the inheritance of text transform in Edge, Firefox, and IE.\n * 1. Remove the inheritance of text transform in Firefox.\n */\n\nbutton,\nselect { /* 1 */\n  text-transform: none;\n}\n\n/**\n * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`\n *    controls in Android 4.\n * 2. Correct the inability to style clickable types in iOS and Safari.\n */\n\nbutton,\nhtml [type=\"button\"], /* 1 */\n[type=\"reset\"],\n[type=\"submit\"] {\n  -webkit-appearance: button; /* 2 */\n}\n\n/**\n * Remove the inner border and padding in Firefox.\n */\n\nbutton::-moz-focus-inner,\n[type=\"button\"]::-moz-focus-inner,\n[type=\"reset\"]::-moz-focus-inner,\n[type=\"submit\"]::-moz-focus-inner {\n  border-style: none;\n  padding: 0;\n}\n\n/**\n * Restore the focus styles unset by the previous rule.\n */\n\nbutton:-moz-focusring,\n[type=\"button\"]:-moz-focusring,\n[type=\"reset\"]:-moz-focusring,\n[type=\"submit\"]:-moz-focusring {\n  outline: 1px dotted ButtonText;\n}\n\n/**\n * Correct the padding in Firefox.\n */\n\nfieldset {\n  padding: 0.35em 0.75em 0.625em;\n}\n\n/**\n * 1. Correct the text wrapping in Edge and IE.\n * 2. Correct the color inheritance from `fieldset` elements in IE.\n * 3. Remove the padding so developers are not caught out when they zero out\n *    `fieldset` elements in all browsers.\n */\n\nlegend {\n  box-sizing: border-box; /* 1 */\n  color: inherit; /* 2 */\n  display: table; /* 1 */\n  max-width: 100%; /* 1 */\n  padding: 0; /* 3 */\n  white-space: normal; /* 1 */\n}\n\n/**\n * 1. Add the correct display in IE 9-.\n * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.\n */\n\nprogress {\n  display: inline-block; /* 1 */\n  vertical-align: baseline; /* 2 */\n}\n\n/**\n * Remove the default vertical scrollbar in IE.\n */\n\ntextarea {\n  overflow: auto;\n}\n\n/**\n * 1. Add the correct box sizing in IE 10-.\n * 2. Remove the padding in IE 10-.\n */\n\n[type=\"checkbox\"],\n[type=\"radio\"] {\n  box-sizing: border-box; /* 1 */\n  padding: 0; /* 2 */\n}\n\n/**\n * Correct the cursor style of increment and decrement buttons in Chrome.\n */\n\n[type=\"number\"]::-webkit-inner-spin-button,\n[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto;\n}\n\n/**\n * 1. Correct the odd appearance in Chrome and Safari.\n * 2. Correct the outline style in Safari.\n */\n\n[type=\"search\"] {\n  -webkit-appearance: textfield; /* 1 */\n  outline-offset: -2px; /* 2 */\n}\n\n/**\n * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.\n */\n\n[type=\"search\"]::-webkit-search-cancel-button,\n[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\n\n/**\n * 1. Correct the inability to style clickable types in iOS and Safari.\n * 2. Change font properties to `inherit` in Safari.\n */\n\n::-webkit-file-upload-button {\n  -webkit-appearance: button; /* 1 */\n  font: inherit; /* 2 */\n}\n\n/* Interactive\n   ========================================================================== */\n\n/*\n * Add the correct display in IE 9-.\n * 1. Add the correct display in Edge, IE, and Firefox.\n */\n\ndetails, /* 1 */\nmenu {\n  display: block;\n}\n\n/*\n * Add the correct display in all browsers.\n */\n\nsummary {\n  display: list-item;\n}\n\n/* Scripting\n   ========================================================================== */\n\n/**\n * Add the correct display in IE 9-.\n */\n\ncanvas {\n  display: inline-block;\n}\n\n/**\n * Add the correct display in IE.\n */\n\ntemplate {\n  display: none;\n}\n\n/* Hidden\n   ========================================================================== */\n\n/**\n * Add the correct display in IE 10-.\n */\n\n[hidden] {\n  display: none;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * When source maps are enabled, `style-loader` uses a link element with a data-uri to
+ * embed the css on the page. This breaks all relative urls because now they are relative to a
+ * bundle instead of the current page.
+ *
+ * One solution is to only use full urls, but that may be impossible.
+ *
+ * Instead, this function "fixes" the relative urls to be absolute according to the current page location.
+ *
+ * A rudimentary test suite is located at `test/fixUrls.js` and can be run via the `npm test` command.
+ *
+ */
+
+module.exports = function (css) {
+	// get current location
+	var location = typeof window !== "undefined" && window.location;
+
+	if (!location) {
+		throw new Error("fixUrls requires window.location");
+	}
+
+	// blank or null?
+	if (!css || typeof css !== "string") {
+		return css;
+	}
+
+	var baseUrl = location.protocol + "//" + location.host;
+	var currentDir = baseUrl + location.pathname.replace(/\/[^\/]*$/, "/");
+
+	// convert each url(...)
+	/*
+ This regular expression is just a way to recursively match brackets within
+ a string.
+ 	 /url\s*\(  = Match on the word "url" with any whitespace after it and then a parens
+    (  = Start a capturing group
+      (?:  = Start a non-capturing group
+          [^)(]  = Match anything that isn't a parentheses
+          |  = OR
+          \(  = Match a start parentheses
+              (?:  = Start another non-capturing groups
+                  [^)(]+  = Match anything that isn't a parentheses
+                  |  = OR
+                  \(  = Match a start parentheses
+                      [^)(]*  = Match anything that isn't a parentheses
+                  \)  = Match a end parentheses
+              )  = End Group
+              *\) = Match anything and then a close parens
+          )  = Close non-capturing group
+          *  = Match anything
+       )  = Close capturing group
+  \)  = Match a close parens
+ 	 /gi  = Get all matches, not the first.  Be case insensitive.
+  */
+	var fixedCss = css.replace(/url\s*\(((?:[^)(]|\((?:[^)(]+|\([^)(]*\))*\))*)\)/gi, function (fullMatch, origUrl) {
+		// strip quotes (if they exist)
+		var unquotedOrigUrl = origUrl.trim().replace(/^"(.*)"$/, function (o, $1) {
+			return $1;
+		}).replace(/^'(.*)'$/, function (o, $1) {
+			return $1;
+		});
+
+		// already a full url? no change
+		if (/^(#|data:|http:\/\/|https:\/\/|file:\/\/\/)/i.test(unquotedOrigUrl)) {
+			return fullMatch;
+		}
+
+		// convert the url to a full url
+		var newUrl;
+
+		if (unquotedOrigUrl.indexOf("//") === 0) {
+			//TODO: should we add protocol?
+			newUrl = unquotedOrigUrl;
+		} else if (unquotedOrigUrl.indexOf("/") === 0) {
+			// path should be relative to the base url
+			newUrl = baseUrl + unquotedOrigUrl; // already starts with '/'
+		} else {
+			// path should be relative to current directory
+			newUrl = currentDir + unquotedOrigUrl.replace(/^\.\//, ""); // Strip leading './'
+		}
+
+		// send back the fixed url(...)
+		return "url(" + JSON.stringify(newUrl) + ")";
+	});
+
+	// send back the fixed css
+	return fixedCss;
+};
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(8);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {"hmr":true}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/sass-loader/lib/loader.js!./main.scss", function() {
+			var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/sass-loader/lib/loader.js!./main.scss");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "* {\n  font-family: 'Roboto', sans-serif;\n  -webkit-font-smoothing: antialiased; }\n\nvideo::-webkit-media-controls {\n  display: none !important; }\n\n.wrapper--main {\n  padding-left: 5%;\n  padding-right: 5%; }\n\n.row::after {\n  content: \"\";\n  clear: both;\n  display: table; }\n\n@media (max-width: 800px) {\n  .row__medium-12 {\n    float: left;\n    width: 100%; } }\n\n@media (max-width: 1200px) {\n  .row__large-6 {\n    float: left;\n    width: 50%; } }\n\n.navigation {\n  width: 100%;\n  height: 45px;\n  background-color: rgba(0, 0, 0, 0.75);\n  position: fixed;\n  top: 0;\n  z-index: 100; }\n  .navigation__link-container {\n    list-style-type: none;\n    font-size: 1em;\n    padding-left: 0;\n    margin: 0; }\n  .navigation__links {\n    float: left;\n    display: inline-block;\n    color: #fff;\n    font-weight: 400;\n    height: 45px;\n    line-height: 45px;\n    padding: 0 2.3%;\n    transition: all .2s ease-in; }\n    @media (max-width: 530px) {\n      .navigation__links {\n        display: none; } }\n    .navigation__links:hover {\n      color: #c8c8c8; }\n  .navigation__first-link {\n    background-color: #d99850;\n    margin-right: 10px; }\n    .navigation__first-link:hover {\n      background-color: #bf8749; }\n    @media (max-width: 530px) {\n      .navigation__first-link {\n        display: inline-block; } }\n  .navigation__logo {\n    display: inline-block;\n    vertical-align: middle;\n    height: 30px;\n    line-height: 50px;\n    padding-right: 0px;\n    padding: 0px 15px 0px 15px; }\n\n.mobile-nav {\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 1000;\n  height: 100%;\n  width: 100%;\n  background-color: rgba(0, 0, 0, 0.85);\n  text-align: center;\n  opacity: 0;\n  visibility: hidden;\n  transition: opacity .3s, visibility .3s, height .3s;\n  overflow: hidden; }\n  .mobile-nav--active {\n    opacity: 1;\n    visibility: visible; }\n  .mobile-nav__link-container {\n    position: relative;\n    top: 50%;\n    height: 40%;\n    transform: translateY(-50%);\n    font-size: 30px;\n    font-weight: 100;\n    text-align: center; }\n    .mobile-nav__link-container ul {\n      list-style-type: none;\n      display: inline-block;\n      position: relative;\n      height: 100%;\n      margin: 0px;\n      padding: 0px; }\n  .mobile-nav__links {\n    display: block;\n    height: 25%;\n    min-height: 50px;\n    position: relative;\n    text-align: center; }\n    .mobile-nav__links a {\n      text-decoration: none;\n      color: #fff; }\n\n.menu-icon {\n  position: fixed;\n  display: none;\n  top: 11px;\n  right: 5%;\n  height: 24px;\n  width: 35px;\n  cursor: pointer;\n  z-index: 1200;\n  transition: opacity .25s ease; }\n  @media (max-width: 530px) {\n    .menu-icon {\n      display: inline; } }\n  .menu-icon span {\n    position: absolute;\n    background-color: #dea35a;\n    height: 4px;\n    width: 100%;\n    border: none;\n    left: 0;\n    transition: all .35s ease;\n    cursor: pointer; }\n  .menu-icon__top {\n    top: 0; }\n    .menu-icon__top.active {\n      transform: translateY(10px) translateX(0) rotate(45deg);\n      background: #dea35a; }\n  .menu-icon__middle {\n    top: 10px; }\n    .menu-icon__middle.active {\n      opacity: 0;\n      background: #dea35a; }\n  .menu-icon__bottom {\n    top: 20px; }\n    .menu-icon__bottom.active {\n      transform: translateY(-10px) translateX(0) rotate(-45deg);\n      background: #dea35a; }\n\n.section {\n  width: 100%;\n  height: 100vh;\n  min-height: 600px;\n  padding: 0;\n  margin: 0;\n  overflow: hidden; }\n  .section--about {\n    background-color: black;\n    height: 100%;\n    width: 100%;\n    color: white;\n    background-color: #171717; }\n\n.home-section {\n  width: 100%;\n  height: 100%;\n  overflow: hidden;\n  background-color: black;\n  position: relative; }\n  .home-section__video {\n    min-width: 100%;\n    min-height: 110%;\n    position: absolute;\n    right: 0;\n    top: -10vh;\n    z-index: 0;\n    transition: all .4s ease-in-out; }\n    @media (max-width: 1000px) {\n      .home-section__video {\n        height: 100%;\n        right: -275px; } }\n  .home-section__text-container {\n    position: absolute;\n    top: 40%;\n    z-index: 99;\n    color: white;\n    display: inline-block;\n    padding: 0 5%; }\n    @media (max-width: 800px) {\n      .home-section__text-container {\n        top: 40%; } }\n    @media (max-width: 530px) {\n      .home-section__text-container {\n        text-align: center;\n        width: 100%;\n        padding: 0; } }\n    @media (max-height: 700px) {\n      .home-section__text-container {\n        top: 50%;\n        transform: translateY(-50%); } }\n  .home-section__logo-header {\n    z-index: 100;\n    width: 300px;\n    padding-bottom: 50px;\n    transition: all .5s ease; }\n    @media (max-width: 800px) {\n      .home-section__logo-header {\n        width: 200px;\n        padding-bottom: 0px; } }\n  .home-section__text {\n    color: white;\n    font-weight: 100; }\n    @media (max-width: 530px) {\n      .home-section__text {\n        font-weight: 400; } }\n  .home-section__name {\n    font-size: 6em;\n    line-height: 0;\n    transition: all .5s ease; }\n    @media (max-width: 800px) {\n      .home-section__name {\n        font-size: 4.25em; } }\n    @media (max-width: 530px) {\n      .home-section__name {\n        font-size: 3em; } }\n  .home-section__subtitle {\n    font-size: 2.4em;\n    line-height: .5;\n    opacity: .6;\n    margin: 0;\n    transition: all .5s ease; }\n    @media (max-width: 800px) {\n      .home-section__subtitle {\n        font-size: 1.65em;\n        opacity: .8; } }\n    @media (max-width: 530px) {\n      .home-section__subtitle {\n        font-size: 1.3em;\n        opacity: 1;\n        color: #c8c8c8; } }\n\n.social-links {\n  padding: 0; }\n  .social-links ul {\n    margin: 0;\n    padding: 0;\n    padding-top: 15px;\n    font-size: 0; }\n    @media (max-width: 530px) {\n      .social-links ul {\n        padding-top: 8px; } }\n  .social-links__list-item {\n    list-style-type: none;\n    display: inline-block;\n    padding: 0;\n    padding-right: 10px;\n    opacity: .4;\n    transition: all .3s ease; }\n    @media (max-width: 800px) {\n      .social-links__list-item {\n        padding-right: 8px; } }\n    .social-links__list-item:hover {\n      padding-right: 25px;\n      opacity: 1; }\n    @media (max-width: 530px) {\n      .social-links__list-item:hover {\n        padding-right: 8px; } }\n  .social-links__link {\n    height: 30px;\n    width: 30px; }\n    @media (max-width: 800px) {\n      .social-links__link {\n        width: 25px;\n        height: 25px; } }\n    @media (max-width: 530px) {\n      .social-links__link {\n        width: 22px;\n        height: 22px; } }\n\n.rating {\n  fill: #171717;\n  position: relative;\n  z-index: 50; }\n  .rating__module {\n    width: 180px;\n    display: inline-block;\n    position: absolute;\n    right: 0;\n    top: 5px;\n    margin-left: 10px; }\n  .rating__title {\n    font-weight: 100;\n    font-size: 1.562em;\n    display: inline-block;\n    float: left;\n    margin: 0;\n    margin-right: 230px;\n    padding: 0; }\n  .rating__container {\n    display: block;\n    position: relative;\n    max-width: 400px;\n    margin: auto;\n    height: 45px;\n    padding: 5px 0px;\n    text-align: center;\n    z-index: 50; }\n  .rating__background {\n    position: absolute;\n    top: 3px;\n    left: 2px;\n    bottom: 5px;\n    right: 0;\n    width: 97%;\n    background-color: #d99850;\n    z-index: -2; }\n  .rating__background-dark-grey {\n    position: absolute;\n    top: 0;\n    left: 2px;\n    bottom: 5px;\n    margin-left: 20%;\n    right: 0;\n    background-color: #202020;\n    z-index: -1;\n    transition: all 1.5s ease; }\n  .rating__extended-width {\n    margin-left: 97%; }\n\n.about-module {\n  background-color: #171717;\n  height: 100vh;\n  min-height: 200px;\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box;\n  position: relative;\n  text-align: center; }\n  .about-module__content {\n    font-size: 1.3em;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    width: 100%;\n    min-height: 300px;\n    border: 1px solid #fff;\n    box-sizing: border-box; }\n    .about-module__content--left {\n      padding-right: 30px; }\n  .about-module__header {\n    color: #d99850;\n    font-weight: 100; }\n  .about-module__text-content {\n    font-weight: 100; }\n\n.reveal-item {\n  opacity: 0;\n  transition: opacity 1.5s ease-out; }\n  .reveal-item--is-visible {\n    opacity: 1; }\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(2);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var MenuIcon = function () {
+  function MenuIcon() {
+    _classCallCheck(this, MenuIcon);
+
+    this.menuButton = (0, _jquery2.default)("#toggle");
+    this.topBar = (0, _jquery2.default)(".menu-icon__top");
+    this.middleBar = (0, _jquery2.default)(".menu-icon__middle");
+    this.bottomBar = (0, _jquery2.default)(".menu-icon__bottom");
+    this.mobileNav = (0, _jquery2.default)("#mobileNav");
+    this.events();
+  }
+
+  _createClass(MenuIcon, [{
+    key: "events",
+    value: function events() {
+      this.menuButton.click(this.toggleClass.bind(this));
+    }
+  }, {
+    key: "toggleClass",
+    value: function toggleClass() {
+      this.topBar.toggleClass("active");
+      this.middleBar.toggleClass("active");
+      this.bottomBar.toggleClass("active");
+      this.mobileNav.toggleClass("mobile-nav--active");
+    }
+  }]);
+
+  return MenuIcon;
+}();
+
+exports.default = MenuIcon;
+
+/***/ }),
 /* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10641,6 +10646,815 @@ module.exports = function (module) {
 	}
 	return module;
 };
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(2);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _noframework = __webpack_require__(12);
+
+var _noframework2 = _interopRequireDefault(_noframework);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var RevealOnScroll = function () {
+  function RevealOnScroll() {
+    _classCallCheck(this, RevealOnScroll);
+
+    this.itemsToReveal = (0, _jquery2.default)(".about-module");
+    this.createWaypoints();
+  }
+
+  _createClass(RevealOnScroll, [{
+    key: 'createWaypoints',
+    value: function createWaypoints() {
+      this.itemsToReveal.each(function () {
+        var currentItem = this;
+        new Waypoint({
+          element: currentItem,
+          handler: function handler() {
+            (0, _jquery2.default)(currentItem).addClass("reveal-item--is-visible");
+          },
+          offset: "45%"
+        });
+      });
+    }
+  }]);
+
+  return RevealOnScroll;
+}();
+
+exports.default = RevealOnScroll;
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+/*!
+Waypoints - 4.0.1
+Copyright © 2011-2016 Caleb Troughton
+Licensed under the MIT license.
+https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
+*/
+(function () {
+  'use strict';
+
+  var keyCounter = 0;
+  var allWaypoints = {};
+
+  /* http://imakewebthings.com/waypoints/api/waypoint */
+  function Waypoint(options) {
+    if (!options) {
+      throw new Error('No options passed to Waypoint constructor');
+    }
+    if (!options.element) {
+      throw new Error('No element option passed to Waypoint constructor');
+    }
+    if (!options.handler) {
+      throw new Error('No handler option passed to Waypoint constructor');
+    }
+
+    this.key = 'waypoint-' + keyCounter;
+    this.options = Waypoint.Adapter.extend({}, Waypoint.defaults, options);
+    this.element = this.options.element;
+    this.adapter = new Waypoint.Adapter(this.element);
+    this.callback = options.handler;
+    this.axis = this.options.horizontal ? 'horizontal' : 'vertical';
+    this.enabled = this.options.enabled;
+    this.triggerPoint = null;
+    this.group = Waypoint.Group.findOrCreate({
+      name: this.options.group,
+      axis: this.axis
+    });
+    this.context = Waypoint.Context.findOrCreateByElement(this.options.context);
+
+    if (Waypoint.offsetAliases[this.options.offset]) {
+      this.options.offset = Waypoint.offsetAliases[this.options.offset];
+    }
+    this.group.add(this);
+    this.context.add(this);
+    allWaypoints[this.key] = this;
+    keyCounter += 1;
+  }
+
+  /* Private */
+  Waypoint.prototype.queueTrigger = function (direction) {
+    this.group.queueTrigger(this, direction);
+  };
+
+  /* Private */
+  Waypoint.prototype.trigger = function (args) {
+    if (!this.enabled) {
+      return;
+    }
+    if (this.callback) {
+      this.callback.apply(this, args);
+    }
+  };
+
+  /* Public */
+  /* http://imakewebthings.com/waypoints/api/destroy */
+  Waypoint.prototype.destroy = function () {
+    this.context.remove(this);
+    this.group.remove(this);
+    delete allWaypoints[this.key];
+  };
+
+  /* Public */
+  /* http://imakewebthings.com/waypoints/api/disable */
+  Waypoint.prototype.disable = function () {
+    this.enabled = false;
+    return this;
+  };
+
+  /* Public */
+  /* http://imakewebthings.com/waypoints/api/enable */
+  Waypoint.prototype.enable = function () {
+    this.context.refresh();
+    this.enabled = true;
+    return this;
+  };
+
+  /* Public */
+  /* http://imakewebthings.com/waypoints/api/next */
+  Waypoint.prototype.next = function () {
+    return this.group.next(this);
+  };
+
+  /* Public */
+  /* http://imakewebthings.com/waypoints/api/previous */
+  Waypoint.prototype.previous = function () {
+    return this.group.previous(this);
+  };
+
+  /* Private */
+  Waypoint.invokeAll = function (method) {
+    var allWaypointsArray = [];
+    for (var waypointKey in allWaypoints) {
+      allWaypointsArray.push(allWaypoints[waypointKey]);
+    }
+    for (var i = 0, end = allWaypointsArray.length; i < end; i++) {
+      allWaypointsArray[i][method]();
+    }
+  };
+
+  /* Public */
+  /* http://imakewebthings.com/waypoints/api/destroy-all */
+  Waypoint.destroyAll = function () {
+    Waypoint.invokeAll('destroy');
+  };
+
+  /* Public */
+  /* http://imakewebthings.com/waypoints/api/disable-all */
+  Waypoint.disableAll = function () {
+    Waypoint.invokeAll('disable');
+  };
+
+  /* Public */
+  /* http://imakewebthings.com/waypoints/api/enable-all */
+  Waypoint.enableAll = function () {
+    Waypoint.Context.refreshAll();
+    for (var waypointKey in allWaypoints) {
+      allWaypoints[waypointKey].enabled = true;
+    }
+    return this;
+  };
+
+  /* Public */
+  /* http://imakewebthings.com/waypoints/api/refresh-all */
+  Waypoint.refreshAll = function () {
+    Waypoint.Context.refreshAll();
+  };
+
+  /* Public */
+  /* http://imakewebthings.com/waypoints/api/viewport-height */
+  Waypoint.viewportHeight = function () {
+    return window.innerHeight || document.documentElement.clientHeight;
+  };
+
+  /* Public */
+  /* http://imakewebthings.com/waypoints/api/viewport-width */
+  Waypoint.viewportWidth = function () {
+    return document.documentElement.clientWidth;
+  };
+
+  Waypoint.adapters = [];
+
+  Waypoint.defaults = {
+    context: window,
+    continuous: true,
+    enabled: true,
+    group: 'default',
+    horizontal: false,
+    offset: 0
+  };
+
+  Waypoint.offsetAliases = {
+    'bottom-in-view': function bottomInView() {
+      return this.context.innerHeight() - this.adapter.outerHeight();
+    },
+    'right-in-view': function rightInView() {
+      return this.context.innerWidth() - this.adapter.outerWidth();
+    }
+  };
+
+  window.Waypoint = Waypoint;
+})();(function () {
+  'use strict';
+
+  function requestAnimationFrameShim(callback) {
+    window.setTimeout(callback, 1000 / 60);
+  }
+
+  var keyCounter = 0;
+  var contexts = {};
+  var Waypoint = window.Waypoint;
+  var oldWindowLoad = window.onload;
+
+  /* http://imakewebthings.com/waypoints/api/context */
+  function Context(element) {
+    this.element = element;
+    this.Adapter = Waypoint.Adapter;
+    this.adapter = new this.Adapter(element);
+    this.key = 'waypoint-context-' + keyCounter;
+    this.didScroll = false;
+    this.didResize = false;
+    this.oldScroll = {
+      x: this.adapter.scrollLeft(),
+      y: this.adapter.scrollTop()
+    };
+    this.waypoints = {
+      vertical: {},
+      horizontal: {}
+    };
+
+    element.waypointContextKey = this.key;
+    contexts[element.waypointContextKey] = this;
+    keyCounter += 1;
+    if (!Waypoint.windowContext) {
+      Waypoint.windowContext = true;
+      Waypoint.windowContext = new Context(window);
+    }
+
+    this.createThrottledScrollHandler();
+    this.createThrottledResizeHandler();
+  }
+
+  /* Private */
+  Context.prototype.add = function (waypoint) {
+    var axis = waypoint.options.horizontal ? 'horizontal' : 'vertical';
+    this.waypoints[axis][waypoint.key] = waypoint;
+    this.refresh();
+  };
+
+  /* Private */
+  Context.prototype.checkEmpty = function () {
+    var horizontalEmpty = this.Adapter.isEmptyObject(this.waypoints.horizontal);
+    var verticalEmpty = this.Adapter.isEmptyObject(this.waypoints.vertical);
+    var isWindow = this.element == this.element.window;
+    if (horizontalEmpty && verticalEmpty && !isWindow) {
+      this.adapter.off('.waypoints');
+      delete contexts[this.key];
+    }
+  };
+
+  /* Private */
+  Context.prototype.createThrottledResizeHandler = function () {
+    var self = this;
+
+    function resizeHandler() {
+      self.handleResize();
+      self.didResize = false;
+    }
+
+    this.adapter.on('resize.waypoints', function () {
+      if (!self.didResize) {
+        self.didResize = true;
+        Waypoint.requestAnimationFrame(resizeHandler);
+      }
+    });
+  };
+
+  /* Private */
+  Context.prototype.createThrottledScrollHandler = function () {
+    var self = this;
+    function scrollHandler() {
+      self.handleScroll();
+      self.didScroll = false;
+    }
+
+    this.adapter.on('scroll.waypoints', function () {
+      if (!self.didScroll || Waypoint.isTouch) {
+        self.didScroll = true;
+        Waypoint.requestAnimationFrame(scrollHandler);
+      }
+    });
+  };
+
+  /* Private */
+  Context.prototype.handleResize = function () {
+    Waypoint.Context.refreshAll();
+  };
+
+  /* Private */
+  Context.prototype.handleScroll = function () {
+    var triggeredGroups = {};
+    var axes = {
+      horizontal: {
+        newScroll: this.adapter.scrollLeft(),
+        oldScroll: this.oldScroll.x,
+        forward: 'right',
+        backward: 'left'
+      },
+      vertical: {
+        newScroll: this.adapter.scrollTop(),
+        oldScroll: this.oldScroll.y,
+        forward: 'down',
+        backward: 'up'
+      }
+    };
+
+    for (var axisKey in axes) {
+      var axis = axes[axisKey];
+      var isForward = axis.newScroll > axis.oldScroll;
+      var direction = isForward ? axis.forward : axis.backward;
+
+      for (var waypointKey in this.waypoints[axisKey]) {
+        var waypoint = this.waypoints[axisKey][waypointKey];
+        if (waypoint.triggerPoint === null) {
+          continue;
+        }
+        var wasBeforeTriggerPoint = axis.oldScroll < waypoint.triggerPoint;
+        var nowAfterTriggerPoint = axis.newScroll >= waypoint.triggerPoint;
+        var crossedForward = wasBeforeTriggerPoint && nowAfterTriggerPoint;
+        var crossedBackward = !wasBeforeTriggerPoint && !nowAfterTriggerPoint;
+        if (crossedForward || crossedBackward) {
+          waypoint.queueTrigger(direction);
+          triggeredGroups[waypoint.group.id] = waypoint.group;
+        }
+      }
+    }
+
+    for (var groupKey in triggeredGroups) {
+      triggeredGroups[groupKey].flushTriggers();
+    }
+
+    this.oldScroll = {
+      x: axes.horizontal.newScroll,
+      y: axes.vertical.newScroll
+    };
+  };
+
+  /* Private */
+  Context.prototype.innerHeight = function () {
+    /*eslint-disable eqeqeq */
+    if (this.element == this.element.window) {
+      return Waypoint.viewportHeight();
+    }
+    /*eslint-enable eqeqeq */
+    return this.adapter.innerHeight();
+  };
+
+  /* Private */
+  Context.prototype.remove = function (waypoint) {
+    delete this.waypoints[waypoint.axis][waypoint.key];
+    this.checkEmpty();
+  };
+
+  /* Private */
+  Context.prototype.innerWidth = function () {
+    /*eslint-disable eqeqeq */
+    if (this.element == this.element.window) {
+      return Waypoint.viewportWidth();
+    }
+    /*eslint-enable eqeqeq */
+    return this.adapter.innerWidth();
+  };
+
+  /* Public */
+  /* http://imakewebthings.com/waypoints/api/context-destroy */
+  Context.prototype.destroy = function () {
+    var allWaypoints = [];
+    for (var axis in this.waypoints) {
+      for (var waypointKey in this.waypoints[axis]) {
+        allWaypoints.push(this.waypoints[axis][waypointKey]);
+      }
+    }
+    for (var i = 0, end = allWaypoints.length; i < end; i++) {
+      allWaypoints[i].destroy();
+    }
+  };
+
+  /* Public */
+  /* http://imakewebthings.com/waypoints/api/context-refresh */
+  Context.prototype.refresh = function () {
+    /*eslint-disable eqeqeq */
+    var isWindow = this.element == this.element.window;
+    /*eslint-enable eqeqeq */
+    var contextOffset = isWindow ? undefined : this.adapter.offset();
+    var triggeredGroups = {};
+    var axes;
+
+    this.handleScroll();
+    axes = {
+      horizontal: {
+        contextOffset: isWindow ? 0 : contextOffset.left,
+        contextScroll: isWindow ? 0 : this.oldScroll.x,
+        contextDimension: this.innerWidth(),
+        oldScroll: this.oldScroll.x,
+        forward: 'right',
+        backward: 'left',
+        offsetProp: 'left'
+      },
+      vertical: {
+        contextOffset: isWindow ? 0 : contextOffset.top,
+        contextScroll: isWindow ? 0 : this.oldScroll.y,
+        contextDimension: this.innerHeight(),
+        oldScroll: this.oldScroll.y,
+        forward: 'down',
+        backward: 'up',
+        offsetProp: 'top'
+      }
+    };
+
+    for (var axisKey in axes) {
+      var axis = axes[axisKey];
+      for (var waypointKey in this.waypoints[axisKey]) {
+        var waypoint = this.waypoints[axisKey][waypointKey];
+        var adjustment = waypoint.options.offset;
+        var oldTriggerPoint = waypoint.triggerPoint;
+        var elementOffset = 0;
+        var freshWaypoint = oldTriggerPoint == null;
+        var contextModifier, wasBeforeScroll, nowAfterScroll;
+        var triggeredBackward, triggeredForward;
+
+        if (waypoint.element !== waypoint.element.window) {
+          elementOffset = waypoint.adapter.offset()[axis.offsetProp];
+        }
+
+        if (typeof adjustment === 'function') {
+          adjustment = adjustment.apply(waypoint);
+        } else if (typeof adjustment === 'string') {
+          adjustment = parseFloat(adjustment);
+          if (waypoint.options.offset.indexOf('%') > -1) {
+            adjustment = Math.ceil(axis.contextDimension * adjustment / 100);
+          }
+        }
+
+        contextModifier = axis.contextScroll - axis.contextOffset;
+        waypoint.triggerPoint = Math.floor(elementOffset + contextModifier - adjustment);
+        wasBeforeScroll = oldTriggerPoint < axis.oldScroll;
+        nowAfterScroll = waypoint.triggerPoint >= axis.oldScroll;
+        triggeredBackward = wasBeforeScroll && nowAfterScroll;
+        triggeredForward = !wasBeforeScroll && !nowAfterScroll;
+
+        if (!freshWaypoint && triggeredBackward) {
+          waypoint.queueTrigger(axis.backward);
+          triggeredGroups[waypoint.group.id] = waypoint.group;
+        } else if (!freshWaypoint && triggeredForward) {
+          waypoint.queueTrigger(axis.forward);
+          triggeredGroups[waypoint.group.id] = waypoint.group;
+        } else if (freshWaypoint && axis.oldScroll >= waypoint.triggerPoint) {
+          waypoint.queueTrigger(axis.forward);
+          triggeredGroups[waypoint.group.id] = waypoint.group;
+        }
+      }
+    }
+
+    Waypoint.requestAnimationFrame(function () {
+      for (var groupKey in triggeredGroups) {
+        triggeredGroups[groupKey].flushTriggers();
+      }
+    });
+
+    return this;
+  };
+
+  /* Private */
+  Context.findOrCreateByElement = function (element) {
+    return Context.findByElement(element) || new Context(element);
+  };
+
+  /* Private */
+  Context.refreshAll = function () {
+    for (var contextId in contexts) {
+      contexts[contextId].refresh();
+    }
+  };
+
+  /* Public */
+  /* http://imakewebthings.com/waypoints/api/context-find-by-element */
+  Context.findByElement = function (element) {
+    return contexts[element.waypointContextKey];
+  };
+
+  window.onload = function () {
+    if (oldWindowLoad) {
+      oldWindowLoad();
+    }
+    Context.refreshAll();
+  };
+
+  Waypoint.requestAnimationFrame = function (callback) {
+    var requestFn = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || requestAnimationFrameShim;
+    requestFn.call(window, callback);
+  };
+  Waypoint.Context = Context;
+})();(function () {
+  'use strict';
+
+  function byTriggerPoint(a, b) {
+    return a.triggerPoint - b.triggerPoint;
+  }
+
+  function byReverseTriggerPoint(a, b) {
+    return b.triggerPoint - a.triggerPoint;
+  }
+
+  var groups = {
+    vertical: {},
+    horizontal: {}
+  };
+  var Waypoint = window.Waypoint;
+
+  /* http://imakewebthings.com/waypoints/api/group */
+  function Group(options) {
+    this.name = options.name;
+    this.axis = options.axis;
+    this.id = this.name + '-' + this.axis;
+    this.waypoints = [];
+    this.clearTriggerQueues();
+    groups[this.axis][this.name] = this;
+  }
+
+  /* Private */
+  Group.prototype.add = function (waypoint) {
+    this.waypoints.push(waypoint);
+  };
+
+  /* Private */
+  Group.prototype.clearTriggerQueues = function () {
+    this.triggerQueues = {
+      up: [],
+      down: [],
+      left: [],
+      right: []
+    };
+  };
+
+  /* Private */
+  Group.prototype.flushTriggers = function () {
+    for (var direction in this.triggerQueues) {
+      var waypoints = this.triggerQueues[direction];
+      var reverse = direction === 'up' || direction === 'left';
+      waypoints.sort(reverse ? byReverseTriggerPoint : byTriggerPoint);
+      for (var i = 0, end = waypoints.length; i < end; i += 1) {
+        var waypoint = waypoints[i];
+        if (waypoint.options.continuous || i === waypoints.length - 1) {
+          waypoint.trigger([direction]);
+        }
+      }
+    }
+    this.clearTriggerQueues();
+  };
+
+  /* Private */
+  Group.prototype.next = function (waypoint) {
+    this.waypoints.sort(byTriggerPoint);
+    var index = Waypoint.Adapter.inArray(waypoint, this.waypoints);
+    var isLast = index === this.waypoints.length - 1;
+    return isLast ? null : this.waypoints[index + 1];
+  };
+
+  /* Private */
+  Group.prototype.previous = function (waypoint) {
+    this.waypoints.sort(byTriggerPoint);
+    var index = Waypoint.Adapter.inArray(waypoint, this.waypoints);
+    return index ? this.waypoints[index - 1] : null;
+  };
+
+  /* Private */
+  Group.prototype.queueTrigger = function (waypoint, direction) {
+    this.triggerQueues[direction].push(waypoint);
+  };
+
+  /* Private */
+  Group.prototype.remove = function (waypoint) {
+    var index = Waypoint.Adapter.inArray(waypoint, this.waypoints);
+    if (index > -1) {
+      this.waypoints.splice(index, 1);
+    }
+  };
+
+  /* Public */
+  /* http://imakewebthings.com/waypoints/api/first */
+  Group.prototype.first = function () {
+    return this.waypoints[0];
+  };
+
+  /* Public */
+  /* http://imakewebthings.com/waypoints/api/last */
+  Group.prototype.last = function () {
+    return this.waypoints[this.waypoints.length - 1];
+  };
+
+  /* Private */
+  Group.findOrCreate = function (options) {
+    return groups[options.axis][options.name] || new Group(options);
+  };
+
+  Waypoint.Group = Group;
+})();(function () {
+  'use strict';
+
+  var Waypoint = window.Waypoint;
+
+  function isWindow(element) {
+    return element === element.window;
+  }
+
+  function getWindow(element) {
+    if (isWindow(element)) {
+      return element;
+    }
+    return element.defaultView;
+  }
+
+  function NoFrameworkAdapter(element) {
+    this.element = element;
+    this.handlers = {};
+  }
+
+  NoFrameworkAdapter.prototype.innerHeight = function () {
+    var isWin = isWindow(this.element);
+    return isWin ? this.element.innerHeight : this.element.clientHeight;
+  };
+
+  NoFrameworkAdapter.prototype.innerWidth = function () {
+    var isWin = isWindow(this.element);
+    return isWin ? this.element.innerWidth : this.element.clientWidth;
+  };
+
+  NoFrameworkAdapter.prototype.off = function (event, handler) {
+    function removeListeners(element, listeners, handler) {
+      for (var i = 0, end = listeners.length - 1; i < end; i++) {
+        var listener = listeners[i];
+        if (!handler || handler === listener) {
+          element.removeEventListener(listener);
+        }
+      }
+    }
+
+    var eventParts = event.split('.');
+    var eventType = eventParts[0];
+    var namespace = eventParts[1];
+    var element = this.element;
+
+    if (namespace && this.handlers[namespace] && eventType) {
+      removeListeners(element, this.handlers[namespace][eventType], handler);
+      this.handlers[namespace][eventType] = [];
+    } else if (eventType) {
+      for (var ns in this.handlers) {
+        removeListeners(element, this.handlers[ns][eventType] || [], handler);
+        this.handlers[ns][eventType] = [];
+      }
+    } else if (namespace && this.handlers[namespace]) {
+      for (var type in this.handlers[namespace]) {
+        removeListeners(element, this.handlers[namespace][type], handler);
+      }
+      this.handlers[namespace] = {};
+    }
+  };
+
+  /* Adapted from jQuery 1.x offset() */
+  NoFrameworkAdapter.prototype.offset = function () {
+    if (!this.element.ownerDocument) {
+      return null;
+    }
+
+    var documentElement = this.element.ownerDocument.documentElement;
+    var win = getWindow(this.element.ownerDocument);
+    var rect = {
+      top: 0,
+      left: 0
+    };
+
+    if (this.element.getBoundingClientRect) {
+      rect = this.element.getBoundingClientRect();
+    }
+
+    return {
+      top: rect.top + win.pageYOffset - documentElement.clientTop,
+      left: rect.left + win.pageXOffset - documentElement.clientLeft
+    };
+  };
+
+  NoFrameworkAdapter.prototype.on = function (event, handler) {
+    var eventParts = event.split('.');
+    var eventType = eventParts[0];
+    var namespace = eventParts[1] || '__default';
+    var nsHandlers = this.handlers[namespace] = this.handlers[namespace] || {};
+    var nsTypeList = nsHandlers[eventType] = nsHandlers[eventType] || [];
+
+    nsTypeList.push(handler);
+    this.element.addEventListener(eventType, handler);
+  };
+
+  NoFrameworkAdapter.prototype.outerHeight = function (includeMargin) {
+    var height = this.innerHeight();
+    var computedStyle;
+
+    if (includeMargin && !isWindow(this.element)) {
+      computedStyle = window.getComputedStyle(this.element);
+      height += parseInt(computedStyle.marginTop, 10);
+      height += parseInt(computedStyle.marginBottom, 10);
+    }
+
+    return height;
+  };
+
+  NoFrameworkAdapter.prototype.outerWidth = function (includeMargin) {
+    var width = this.innerWidth();
+    var computedStyle;
+
+    if (includeMargin && !isWindow(this.element)) {
+      computedStyle = window.getComputedStyle(this.element);
+      width += parseInt(computedStyle.marginLeft, 10);
+      width += parseInt(computedStyle.marginRight, 10);
+    }
+
+    return width;
+  };
+
+  NoFrameworkAdapter.prototype.scrollLeft = function () {
+    var win = getWindow(this.element);
+    return win ? win.pageXOffset : this.element.scrollLeft;
+  };
+
+  NoFrameworkAdapter.prototype.scrollTop = function () {
+    var win = getWindow(this.element);
+    return win ? win.pageYOffset : this.element.scrollTop;
+  };
+
+  NoFrameworkAdapter.extend = function () {
+    var args = Array.prototype.slice.call(arguments);
+
+    function merge(target, obj) {
+      if ((typeof target === 'undefined' ? 'undefined' : _typeof(target)) === 'object' && (typeof obj === 'undefined' ? 'undefined' : _typeof(obj)) === 'object') {
+        for (var key in obj) {
+          if (obj.hasOwnProperty(key)) {
+            target[key] = obj[key];
+          }
+        }
+      }
+
+      return target;
+    }
+
+    for (var i = 1, end = args.length; i < end; i++) {
+      merge(args[0], args[i]);
+    }
+    return args[0];
+  };
+
+  NoFrameworkAdapter.inArray = function (element, array, i) {
+    return array == null ? -1 : array.indexOf(element, i);
+  };
+
+  NoFrameworkAdapter.isEmptyObject = function (obj) {
+    /* eslint no-unused-vars: 0 */
+    for (var name in obj) {
+      return false;
+    }
+    return true;
+  };
+
+  Waypoint.adapters.push({
+    name: 'noframework',
+    Adapter: NoFrameworkAdapter
+  });
+  Waypoint.Adapter = NoFrameworkAdapter;
+})();
 
 /***/ })
 /******/ ]);
