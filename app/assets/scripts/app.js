@@ -2,10 +2,12 @@ import "../../../node_modules/normalize.css/normalize.css";
 import '../scss/main.scss';
 import MenuIcon from './modules/menu-icon';
 import RevealOnScroll from './modules/RevealOnScroll';
+import LoadScreen from './modules/load-screen';
 import $ from 'jquery';
 const message = 'hello webpack';
 
 var menuIcon = new MenuIcon();
+var loadScreen = new LoadScreen();
 new RevealOnScroll($(".reveal-item"),"40%","reveal-item--is-visible");
 new RevealOnScroll($(".photoshop"),"85%","rating__photoshop-skill");
 new RevealOnScroll($(".illustrator"),"85%","rating__illustrator-skill");

@@ -1,0 +1,52 @@
+.loading-screen{
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  background-color: $darkGrey;
+  z-index:1300;
+
+  &__loading-emblem{
+    width:100px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-50px;
+    margin-top:-50px;
+    -webkit-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+  }
+
+  &__text{
+    color:#fff;
+    font-weight: 100;
+    font-size: 25px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    margin-top:80px;
+  }
+
+
+
+}
+@keyframes spin {
+  from{
+    transform:rotateY(0deg);
+
+  }
+  to {
+    transform:rotateY(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  from{
+    transform:rotateY(0deg);
+
+  }
+  to {
+    transform:rotateY(360deg);
+  }
+}
