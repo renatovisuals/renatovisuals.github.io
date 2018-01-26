@@ -16,6 +16,8 @@
     margin-top:-50px;
     -webkit-animation:spin 4s linear infinite;
     animation:spin 4s linear infinite;
+    z-index:2000;
+    fill:#fff;
   }
 
   &__text{
@@ -42,11 +44,11 @@
   }
 }
 @-webkit-keyframes spin {
-  from{
+  0%{
     transform:rotateY(0deg);
 
   }
-  to {
+  100% {
     transform:rotateY(360deg);
   }
 }
