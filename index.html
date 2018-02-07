@@ -71,6 +71,7 @@
       <div class="row">
         <div class="about-module reveal-item row__medium-6 row__large-6">
           <div class="about-module__content about-module__content--left">
+            <img class ="about-module__profile-image" src ="app/assets/images/linkedin.jpg">
             <h1 class="about-module__header">My Name Is James Marsh</h1>
             <h2 class="about-module__text-content">I am a 23 year old UI/UX designer and front end developer. I am a fanatic in functional design and scrutinize the small details. Great Design is entitled to great function. I have 6 years of digital design experience. I'm a fan of coffee, music, bike rides, TED talks, and coffee</h2>
           </div>
@@ -192,7 +193,7 @@
     </div>
   </div>
 
-  <div class ="section portfolio-section">
+  <div class ="section section--portfolio">
     <div class="wrapper--main row row--portfolio-gutters reveal-item">
       <div class="portfolio-module row__portfolio-medium-6 row__portfolio-large-4">
         <a href="https://www.facebook.com/" class="portfolio-module__project-link">
@@ -392,6 +393,21 @@
           </div>
           <img class = "portfolio-module__image" src="app/assets/images/projects/project2.jpg">
       </div>
+    </div>
+  </div>
+
+  <div class="section section--contact">
+    <div class = "contact-module">
+      <h3>Contact Me</h3>
+      <h4>phone: <a>(806)500-0114 </a> <h4>
+      <h4>email: <span> renatovisuals&#64;gmail.com </span> <h4>
+
+      <form id="my_form" onsubmit="submitForm(); return false;">
+        <p><input class="input" id="n" placeholder="Name" required /></p>
+        <p><input class="input" id="e" placeholder="Email Address" type="email" required /></p>
+        <textarea class="input" id="m" placeholder="write your message here" rows="10" required /></textarea>
+        <p><input class="contact-button" id="mybtn" type="submit" value="Submit Form"> <span id="status"></span></p>
+      </form>
     </div>
   </div>
 

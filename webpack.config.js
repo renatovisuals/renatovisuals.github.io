@@ -40,7 +40,7 @@ module: {
          ]
      },
      plugins:[
-       new ExtractTextPlugin("app/temp/styles.css"),
+       new ExtractTextPlugin("styles.css"),
      ]
 
 }
