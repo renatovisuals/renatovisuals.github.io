@@ -1,17 +1,39 @@
 .row{
   @include clearfix;
 
+
+
 @include atSmall{
-&__medium-12{
+
+&--portfolio-gutters{
+  margin-right:-50px;
+}
+
+&__small-12{
   float:left;
   width:100%;
 }
+&__small-6{
+  width:50%;
 }
+}
+
+
 
 @include atMedium{
   &__medium-6{
     float:left;
     width:50%;
+  }
+
+  &__portfolio-medium-6{
+    width:50%;
+  }
+}
+
+@include atLarge{
+  &__portfolio-large-4{
+    width:33%;
   }
 }
 

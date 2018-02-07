@@ -1,16 +1,15 @@
 .about-module{
-    background-color: $darkGrey;
     display:block;
     position:relative;
     margin:0;
     box-sizing: border-box;
     text-align: center;
-    padding-top:50px;
+    padding-top:5%;
     padding-bottom: 0;
 
     @include atMedium{
       height:100vh;
-      display:inline;
+      display:inline-block;
       padding:0;
     }
 
@@ -49,6 +48,8 @@
   &__text-content{
     font-weight: 100;
   }
+
+
 
 
 }

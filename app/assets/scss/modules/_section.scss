@@ -5,12 +5,21 @@
   padding:0;
   margin:0;
   overflow:hidden;
+  position:relative;
+
 
   &--about{
-      background-color: black;
       height:100%;
       width:100%;
       color:white;
       background-color:$darkGrey;
+      box-sizing: border-box;
+      padding-bottom:100px;
+
+      @include atMedium{
+        padding:0;
+      }
+
+
   }
 }
