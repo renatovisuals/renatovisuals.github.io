@@ -9,6 +9,7 @@
   <link rel="stylesheet" type="text/css" href="app/temp/styles.css">
   <title>Renato Visuals Home</title>
   </head>
+  <link rel="shortcut icon" href="app/assets/images/renato_icon.png">
   <body>
   <div  id = "loader" class="loading-screen">
 
@@ -398,15 +399,15 @@
 
   <div class="section section--contact">
     <div class = "contact-module">
-      <h3>Contact Me</h3>
-      <h4>phone: <a>(806)500-0114 </a> <h4>
-      <h4>email: <span> renatovisuals&#64;gmail.com </span> <h4>
+      <h3 class="contact-module__title">Contact Me</h3>
+      <h4 class="contact-module__info">phone: <span><a>(806)500-0114 </a> </span> <h4>
+      <h4 class="contact-module__info">email: <span> renatovisuals&#64;gmail.com </span> <h4>
 
-      <form id="my_form" onsubmit="submitForm(); return false;">
+      <form class="contact-module__form" id="my_form" onsubmit="submitForm(); return false;">
         <p><input class="input" id="n" placeholder="Name" required /></p>
         <p><input class="input" id="e" placeholder="Email Address" type="email" required /></p>
         <textarea class="input" id="m" placeholder="write your message here" rows="10" required /></textarea>
-        <p><input class="contact-button" id="mybtn" type="submit" value="Submit Form"> <span id="status"></span></p>
+        <p><input class="contact-module__button" id="mybtn" type="submit" value="Submit Form"> <span id="status"></span></p>
       </form>
     </div>
   </div>

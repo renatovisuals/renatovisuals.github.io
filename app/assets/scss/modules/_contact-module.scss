@@ -3,4 +3,58 @@
   top:50%;
   left:50%;
   transform:translate(-50%,-50%);
+  width:100%;
+  max-width:500px;
+  box-sizing: border-box;
+
+  &__title{
+    font-size: 50px;
+    font-weight: 100;
+  }
+
+  &__info{
+    color:#fff;
+    font-weight: 400;
+    font-size: 20px;
+
+    span{
+      color:$mainGold;
+    }
+  }
+
+&__form{
+  display:inline-block;
+  text-align: center;
+  width:100%;
+  margin:auto;
+  padding:30px;
+  box-sizing: border-box;
+  }
+
+  & .input{
+   width:100%;
+   background-color: #222;
+   border:none;
+   border:2px solid #333;
+   display:block;
+   margin:auto;
+   box-sizing: border-box;
+   padding: 10px;
+   caret-color: #fff;
+   color:$mainGold;
+ }
+
+  & input,textarea:focus{
+   outline:none;
+ }
+
+ &__button{
+   height:50px;
+   margin-top:30px;
+   background-color:#dea35a;
+   border:none;
+   padding: 0 15px;
+   text-align: center;
+   line-height:50px;
+ }
 }
