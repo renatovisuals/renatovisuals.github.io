@@ -203,7 +203,10 @@ video::-webkit-media-controls {
     background-color: #171717;
     text-align: center;
     color: #d99850;
-    font-weight: 100; }
+    font-weight: 100;
+    min-height: 100vh;
+    height: auto;
+    padding: 80px 0px; }
 
 .home-section {
   width: 100%;
