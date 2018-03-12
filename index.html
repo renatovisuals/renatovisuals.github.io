@@ -20,11 +20,10 @@
   <div class = "navigation">
     <div class = "wrapper--main">
       <ul class="navigation__link-container">
-        <a href="#home"><li class = "navigation__links navigation__first-link"><img class ="navigation__logo" src ="app/assets/images/renato_icon.png"></li></a>
-        <a href="#home"><li class = "navigation__links">About</li></a>
-        <a href="#home"><li class = "navigation__links">Portfolio</li></a>
-        <a href="#home"><li class = "navigation__links">Contact</li></a>
-        <a href="#home"><li class = "navigation__links">Just For Fun</li></a>
+        <a id="smooth-scroll" href="#home"><li class = "navigation__links navigation__first-link" id="home-link"><img class ="navigation__logo" src ="app/assets/images/renato_icon.png"></li></a>
+        <a id="smooth-scroll" href="#about"><li class = "navigation__links" id="about-link">About</li></a>
+        <a id="smooth-scroll" href="#portfolio"><li class = "navigation__links" id="portfolio-link">Portfolio</li></a>
+        <a id="smooth-scroll" href="#contact"><li class = "navigation__links" id="contact-link">Contact</li></a>
       </ul>
     </div>
   </div>
@@ -46,9 +45,9 @@
     </div>
   </div>
 
-  <div class="section">
+  <div class="section" data-matching-link="#home-link">
     <div class="home-section" id ="home">
-      <video class = "home-section__video"  playsinline muted poster ="./app/assets/images/header-image.jpg" autoplay="true" loop>
+      <video class = "home-section__video"  webkit-playsinline muted poster ="./app/assets/images/header-image.jpg" autoplay="true" loop>
         <source src="./app/assets/images/header-glitch-compressed.mp4" type="video/mp4">
       </video>
       <div class="home-section__text-container">
@@ -67,7 +66,7 @@
     </div>
   </div>
 
-  <div class="section section--about">
+  <div id="about" class="section section--about" data-matching-link="#about-link">
     <div class="wrapper--main">
       <div class="row">
         <div class="about-module reveal-item row__medium-6 row__large-6">
@@ -194,7 +193,7 @@
     </div>
   </div>
 
-  <div class ="section section--portfolio">
+  <div id="portfolio" class="section section--portfolio" data-matching-link="#portfolio-link">
     <div class="wrapper--main row row--portfolio-gutters reveal-item">
       <div class="portfolio-module row__portfolio-medium-6 row__portfolio-large-4">
         <a href="https://www.facebook.com/" class="portfolio-module__project-link">
@@ -397,8 +396,8 @@
     </div>
   </div>
 
-  <div class="section section--contact">
-    <div class = "contact-module">
+  <div id="contact" class="section section--contact" data-matching-link="#contact-link">
+    <div class = "contact-module reveal-item">
       <h3 class="contact-module__title">Contact Me</h3>
       <h4 class="contact-module__info">phone: <span><a>(806)500-0114 </a> </span> <h4>
       <h4 class="contact-module__info">email: <span> renatovisuals&#64;gmail.com </span> <h4>
@@ -406,8 +405,8 @@
       <form class="contact-module__form" action="https://formspree.io/renatovisuals@gmail.com" method="POST">
         <p><input class="input" type="text" name="name" placeholder="Name" required /></p>
         <p><input class="input" type="email" name="_replyto" placeholder="Email Address" type="email" required /></p>
-        <textarea class="input" type="text" name="name" placeholder="write your message here" rows="10" required /></textarea>
-        <p><input class="contact-module__button"  type="submit" value="Send"> <span id="status"></span></p>
+        <textarea class="input" type="text" name="message" placeholder="write your message here" rows="10" required /></textarea>
+        <p><input class="contact-module__button"  type="submit" value="Send Form"> <span id="status"></span></p>
       </form>
     </div>
   </div>
