@@ -208,7 +208,7 @@ video::-webkit-media-controls {
     font-weight: 100;
     min-height: 100vh;
     height: auto;
-    padding: 0px 0px; }
+    padding: 100px 0px; }
 
 .home-section {
   width: 100%;
@@ -452,7 +452,7 @@ video::-webkit-media-controls {
     border-bottom: 2px solid #d99850;
     z-index: 150; }
     .portfolio-module__title-container h1 {
-      font-size: 4vh;
+      font-size: 3vh;
       color: #d99850;
       font-weight: 300;
       position: absolute;
