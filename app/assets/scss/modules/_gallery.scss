@@ -1,0 +1,31 @@
+.gallery{
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  display:block;
+  background-color: $darkGrey;
+
+
+  &__title {
+    font-weight: 100;
+    font-size: 2.4em;
+    margin:0;
+    color:#fff;
+  }
+
+  &__description{
+    color:#fff;
+    font-size:1.1em;
+
+
+  }
+
+  &__description-border{
+    border-bottom: 1px solid $mainGold;
+    margin-top:100px;
+    padding-bottom:20px;
+    box-sizing: border-box;
+  }
+}

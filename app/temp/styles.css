@@ -5,6 +5,9 @@
 video::-webkit-media-controls {
   display: none !important; }
 
+html, body {
+  height: 100%; }
+
 .wrapper--main {
   padding-left: 5%;
   padding-right: 5%; }
@@ -184,7 +187,8 @@ video::-webkit-media-controls {
   overflow: hidden;
   position: relative; }
   .section--about {
-    height: 100%;
+    min-height: 100vh;
+    height: auto;
     width: 100%;
     color: white;
     background-color: #171717;
@@ -209,6 +213,9 @@ video::-webkit-media-controls {
     min-height: 100vh;
     height: auto;
     padding: 100px 0px; }
+    @media (min-width: 530px) {
+      .section--contact {
+        padding: 0px; } }
 
 .home-section {
   width: 100%;
@@ -560,3 +567,25 @@ video::-webkit-media-controls {
     padding: 0 15px;
     text-align: center;
     line-height: 50px; }
+
+.gallery {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  background-color: #171717; }
+  .gallery__title {
+    font-weight: 100;
+    font-size: 2.4em;
+    margin: 0;
+    color: #fff; }
+  .gallery__description {
+    color: #fff;
+    font-size: 1.1em; }
+  .gallery__description-border {
+    border-bottom: 1px solid #d99850;
+    margin-top: 100px;
+    padding-bottom: 20px;
+    box-sizing: border-box; }
